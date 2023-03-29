@@ -1,15 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
+var passwordText = document.querySelector("#password");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+function writePassword() {
+    var my_new_password = "sagdyady3y1hdsuai";
+    passwordText.value = my_new_password;
+}
