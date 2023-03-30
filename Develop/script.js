@@ -19,21 +19,31 @@ function generatePassword() {
     return;
   }
 
-//   Added prompts for lowercase and uppercase characters
+//   Added prompts for lowercase, uppercase, numbers, and special characters 
   var lowercasePrompt = prompt("Include lowercase letters? (yes/no)");
   var includeLowercase = lowercasePrompt.toLowerCase() === "yes";
   
   var uppercasePrompt = prompt("Include uppercase letters? (yes/no)");
   var includeUppercase = uppercasePrompt.toLowerCase() === "yes";
 
+  var numberPrompt = prompt("Include numbers? (yes/no)");
+  var includeNumber = numberPrompt.toLowerCase() === "yes";
+
+  var symbolsPrompt = prompt("Include special characters? (yes/no)");
+  var includeSymbols = symbolsPrompt.toLowerCase() === "yes";
 
 
+// Defined variables with actual values for lowercase, uppercase, 
+// numbers, and special characters 
 
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var number = "0123456789"
+  var symbols = "!@#$%&*"
+
   
   var allTypes = ""; 
-  
+
   // Include lowercase characters
   if (includeLowercase) {
     allTypes += lowercase;
@@ -42,9 +52,14 @@ function generatePassword() {
   if (includeUppercase) {
     allTypes += uppercase;
   }
-
-
-
+//   Include numbers 
+ if (includeNumber) {
+    allTypes += number;
+  }
+//   Include symbols
+  if (includeSymbols) {
+    allTypes += symbols;
+  }
 
   var password = "";
   
