@@ -41,7 +41,7 @@ function generatePassword() {
   var number = "0123456789"
   var symbols = "!@#$%&*"
 
-  
+  // Defined an empty variable to store all the characters
   var allTypes = ""; 
 
   // Include lowercase characters
@@ -61,9 +61,11 @@ function generatePassword() {
     allTypes += symbols;
   }
 
+
+// created empty variable to store the randomly generated password
   var password = "";
   
-  // Generate random password
+  // Generate random password using for loop and math.random method
   for (var i = 0; i < length; i++) {
     password += allTypes.charAt(Math.floor(Math.random() * allTypes.length));
   }
