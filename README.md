@@ -42,7 +42,7 @@ When prompted for the length of the password, the user can choose a length of at
 <br>
 <br>
 
-![alt text](assets/length-prompt.jpg)
+![alt text](Assets/length-prompt.jpg)
 
 <br>
 <br>
@@ -54,7 +54,7 @@ When asked for what character types to include in the password, the user can con
 <br>
 <br>
 
-![alt text](assets/characters-prompt.jpg)
+![alt text](Assets/characters-prompt.jpg)
 
 <br>
 <br>
@@ -65,7 +65,7 @@ When the password is generated, it will be displayed on the page.
 <br>
 <br>
 
-![alt text](assets/pwd-displayed.jpg)
+![alt text](Assets/pwd-displayed.jpg)
 
 <br>
 <br>
