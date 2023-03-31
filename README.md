@@ -24,7 +24,8 @@ This project required refactoring of the starter code provided to create an appl
 
 ## Table of Contents
 
-* [Aaplication Highlights and Usage](#application-highlights-and-usage)
+* [Application Highlights and Usage](#application-highlights-and-usage)
+* [Code Snippets](#code-snippets)
 * [Learning Points](#learning-points)
 * [Author Info](#author-info)
 * [Credits](#credits)
@@ -37,7 +38,9 @@ This project required refactoring of the starter code provided to create an appl
 <br>
 
 When prompted for the length of the password, the user can choose a length of at least 8 characters and no more than 128 characters
-
+<br>
+<br>
+<br>
 
 ![alt text](assets/length-prompt.jpg)
 
@@ -46,7 +49,10 @@ When prompted for the length of the password, the user can choose a length of at
 <br>
 
 
-When asked for character types to include in the password,the user can confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+When asked for what character types to include in the password, the user can confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+<br>
+<br>
+<br>
 
 ![alt text](assets/characters-prompt.jpg)
 
@@ -54,17 +60,56 @@ When asked for character types to include in the password,the user can confirm w
 <br>
 <br>
 
-When the password is generated, the password is displayed on the page.
-
-
-
+When the password is generated, it will be displayed on the page.
 <br>
 <br>
 <br>
 
 ![alt text](assets/pwd-displayed.jpg)
 
+<br>
+<br>
+<br>
 
+
+
+## Code Snippets
+
+<br>
+
+The following code snippet displays how the variable are declared for prompts of different characters:
+
+
+```javascript
+
+//   Added prompts for lowercase, uppercase, numbers, and special characters 
+  var lowercasePrompt = prompt("Include lowercase letters? (yes/no)");
+  var includeLowercase = lowercasePrompt.toLowerCase() === "yes";
+  
+  var uppercasePrompt = prompt("Include uppercase letters? (yes/no)");
+  var includeUppercase = uppercasePrompt.toLowerCase() === "yes";
+
+  var numberPrompt = prompt("Include numbers? (yes/no)");
+  var includeNumber = numberPrompt.toLowerCase() === "yes";
+
+  var symbolsPrompt = prompt("Include special characters? (yes/no)");
+  var includeSymbols = symbolsPrompt.toLowerCase() === "yes";
+```
+
+<br>
+<br>
+<br>
+
+The below snippet shows how the recurring for-loop will display a randomly generated password based on the user's input of lenght using the Math.random() method:
+
+```javascript
+// Generate random password using for loop and math.random method
+  for (var i = 0; i < length; i++) {
+    password += allTypes.charAt(Math.floor(Math.random() * allTypes.length));
+  }
+  
+  passwordText.value = password;
+```
 
 <br>
 <br>
@@ -74,21 +119,15 @@ When the password is generated, the password is displayed on the page.
 
 I learned the following skills while doing this project:
 <br>
-- Java script basics (functions, arrays, for loops, if-else, alerts, prompts, confirm, etc)
+- Java script basics (functions, arrays, for-loops, if-else, alerts, prompts, confirm, etc)
 - How to call a function
 - When to define a variable
 - How to use .addeventListener and document.querySelector to capture data from an HTML element
 
 
-
-
-
-
 <br>
 
 ## Author Info
-
-```md
 
 ### Aarti Contractor
 
@@ -97,9 +136,7 @@ I learned the following skills while doing this project:
 - Linkedin: https://www.linkedin.com/in/aarti-contractor/
 - Github: https://github.com/aarticontractor
 
-```
 <br>
-
 
 ## Credits
 
